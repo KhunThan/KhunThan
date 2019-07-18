@@ -1,0 +1,121 @@
+<body>
+        <script src="../javascript/21.js"></script>
+        <link rel="stylesheet" type="text/css" href="../css/animationstyle.css" media="screen" />
+        <body>
+                <div id = "title">
+                        <h1 id ="title1" onclick="page1()">Home</h1>
+                        <h1 id ="title2" onclick="page2()">Contact</h1>
+                        <h1 id ="title3" onclick="page3()">About us</h1>
+                    </div>            
+            <div id = "container">
+
+                <div class="innercontainers" id = "container22">
+                        <img src="../image/plantscene2.jpg" alt="">
+                        <h2 style="color: red">Second Page is about the ...................................................................................</h2>
+                    </div>
+                    <div class="innercontainers" id = "container33">
+                        <img src="../image/plantscene1.jpg" alt="">
+                        <h2 style="color: red;">Third Page is about the ....................................................................................</h2>
+                    </div>     
+                <div class="innercontainers" id = "container1">
+                    <img src="../image/myanmarscene.jpg" alt="">
+                    <h2 style="color: red;">The Home page goes here ...................................................................................</h2>
+                    <h2 style="color: red;">Animating whole page</h2>
+                </div>
+                <div class="innercontainers" id = "container2">
+                    <img src="../image/plantscene2.jpg" alt="">
+                    <h2 style="color: red">Contact page goes here ...................................................................................</h2>
+                </div>
+                <div class="innercontainers" id = "container3">
+                    <img src="../image/plantscene1.jpg" alt="">
+                    <h2 style="color: red;">The About page goes here ....................................................................................</h2>                
+                </div>
+            </div>
+        </body>
+        <style>
+            h1{
+                position: absolute;
+                top: 0%;
+                color: rgb(8, 2, 100);
+                cursor: pointer;
+            }
+            h1:hover{
+                color: green;
+            }       
+            #title{
+                position: relative;
+                top: 0%;
+      
+                width: 100%;
+                height: 10%;
+                background-color:white;
+            }
+            #title1{
+                left: 5%;
+            }
+            #title2{
+                left: 15%;
+            }
+            #title3{
+                left: 27%;
+            }
+            #container{
+                position:relative;
+                height: 100%;
+                width: 100%;
+                top: 5%;
+                background-color: grey;
+                background-size: cover;
+            }
+            .innercontainers{
+                position: absolute;
+                width: 80%;
+                height: 100%;
+                top: 0%;
+                left: 10%;
+                background-color: white;
+                animation-name: animat;
+                animation-duration: 1s;
+                border-radius: 10px;
+            }
+            img{
+                top: 0%;
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-radius: 10px;
+            }
+
+        </style>
+        <script>
+            var prev = container1;
+            showhide([container33,container1],[container2,container3],'animate2');
+            function page1(){
+                if(prev == container3){
+                    showhide([container33,container1],[container2,container3],'animate2');
+                }
+                if(prev == container2){
+                    showhide([container22,container1],[container2,container3,container33],'animate2');
+                }
+                prev = container1;
+            }
+            function page2(){
+                if(prev == container1){
+                showhide([container1,container2],[container3],'animate2');
+                }
+                if(prev == container3){
+                    showhide([container33,container2],[container3,container1],'animate2');
+                }
+                prev = container2;
+            }
+            function page3(){
+                if(prev == container2){
+                showhide([container2,container3],[],'animate2');
+                }
+                if(prev == container1){
+                    showhide([container1,container3],[container2],'animate2');
+                }
+                prev = container3;
+            }
+        </script>
+    </body>

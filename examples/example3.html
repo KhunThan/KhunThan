@@ -1,0 +1,111 @@
+<body>
+        <script src="../javascript/21.js"></script>
+        <link rel="stylesheet" type="text/css" href="../css/animationstyle.css" media="screen" />
+        <body>
+            <div id = "title">
+                <h1 id ="title1" onclick="page1()">first page</h1>
+                <h1 id ="title2" onclick="page2()">second page</h1>
+            </div>            
+            <div id = "container">
+                <div class="innercontainers" id = "container0">
+                    <h2 style="color: rgb(250, 252, 251)">Second Page goes here ...................................................................................</h2>
+                    <h2 style="text-align: center;color: white;"><span style="font-size: 30px; font-family:fantasy;">Im nobody! Who are you?</span> <br>
+                        <span style="text-align: right;">by Emily Dickinson</span> <br>
+                        
+                        I'm nobody! Who are you? <br>
+                        Are you nobody, too? <br>
+                        Then there's a pair of us -- don't tell! <br>
+                        They'd advertise -- you know! <br>
+                        
+                        How dreary to be somebody! <br>
+                        How public like a frog <br>
+                        To tell one's name the livelong day <br>
+                        To an admiring bog! <br>
+                </h2>                    
+                </div>       
+                <div class="innercontainers" id = "container1">
+                    <h2 style="color: red;">First Page goes here ...................................................................................</h2>
+                    <h2 style="color: rgb(25, 0, 255);text-align:center;"><span>How far is it to Heaven?</span><br>
+                            by Emily Dickinson <br>
+                            
+                             How far is it to Heaven?<br>
+                            As far as Death this way --<br>
+                            Of River or of Ridge beyond<br>
+                            Was no discovery.<br>
+                            How far is it to Hell?<br>
+                            As far as Death this way --<br>
+                            How far left hand the Sepulchre<br>
+                            Defies Topography.</h2>
+                </div>
+                <div class="innercontainers" id = "container2">
+                    <h2 style="color:  rgb(250, 252, 251)">Second Page goes here ...................................................................................</h2>
+                    <h2 style="text-align: center;color: white;"><span style="font-size: 30px; font-family:fantasy;">Im nobody! Who are you?</span> <br>
+                            <span style="text-align: right;">by Emily Dickinson</span> <br>
+                            
+                            I'm nobody! Who are you? <br>
+                            Are you nobody, too? <br>
+                            Then there's a pair of us -- don't tell! <br>
+                            They'd advertise -- you know! <br>
+                            
+                            How dreary to be somebody! <br>
+                            How public like a frog <br>
+                            To tell one's name the livelong day <br>
+                            To an admiring bog! <br>
+                    </h2>
+                </div>
+            </div>
+        </body>
+        <style>
+            h1{
+                position: absolute;
+                top: 7%;
+                color: rgb(8, 2, 100);
+                cursor: pointer;
+                color:white;
+            }
+            h1:hover{
+                color: red;
+            }       
+            #title{
+                position: relative;
+                width: 100%;
+                height: 20%;
+                background-color: rgb(43, 8, 170);
+            }
+            #title1{
+                left: 6%;
+            }
+            #title2{
+                left: 20%;
+            }
+            #container{
+                position:relative;
+                height: 100%;
+                width: 100%;
+                background-color: grey;
+                background-size: cover;
+            }
+            .innercontainers{
+                position: absolute;
+                width: 90%;
+                height: 100%;
+                top: 0%;
+                left: 5%;
+                background-color: white;
+                animation-name: animat;
+                animation-duration: 1s;
+            }
+            #container2,#container0{
+                background-color: rgb(5, 0, 73);
+            }
+        </style>
+        <script>
+            showhide([container0,container1],[container2],'animate');
+            function page1(){
+                showhide([container0,container1],[container2],'animate');
+            }
+            function page2(){
+                showhide([container1,container2],[],'animate');
+            }
+        </script>
+    </body>
