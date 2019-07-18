@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script src="../javascript/2.js"></script>
+        <link rel="stylesheet" type="text/css" href="../css/2.css" media="screen" />
+    </head>
+    <body>
+        <div id = 'container1'>
+                <img id ='c1' src = '../image/j.jpg'>
+                <img id ='c2' src = '../image/j1.jpg'>   
+                <img id ='c3' src = '../image/j2.jpg'>
+                <img id ='c4' src = '../image/j3.jpg'>
+                <img id ='c5' src = '../image/j4.jpg'>
+                <img id ='a1' src = '../image/j.jpg'>
+                <img id ='a2' src = '../image/j1.jpg'>
+                <img id ='a3' src = '../image/j2.jpg'>
+                <img id ='a4' src = '../image/j3.jpg'>
+                <img id ='a5' src = '../image/j4.jpg'>
+                <div class="buttons" id = 'b1' onclick="ckill(0)" onmouseover="hoverbutton(b1)" onmouseout="mouseout(b1)"><div class = "innerbutton">1</div></div>
+                <div class="buttons" id = 'b2' onclick="ckill(1)" onmouseover="hoverbutton(b2)" onmouseout="mouseout(b2)"><div class = "innerbutton">2</div></div>
+                <div class="buttons" id = 'b3' onclick="ckill(2)" onmouseover="hoverbutton(b3)" onmouseout="mouseout(b3)"><div class = "innerbutton">3</div></div>
+                <div class="buttons" id = 'b4' onclick="ckill(3)" onmouseover="hoverbutton(b4)" onmouseout="mouseout(b4)"><div class = "innerbutton">4</div></div>
+                <div class="buttons" id = 'b5' onclick="ckill(4)" onmouseover="hoverbutton(b5)" onmouseout="mouseout(b5)"><div class = "innerbutton">5</div></div>
+                <div id = 'previous' onclick="previous()"> 
+                    <svg height="30" width="40">
+                        <path d="M30 2 L15 15 L30 28" stroke-width = '4' stroke = 'white' fill = 'none'/>
+                    </svg> 
+                </div>
+                <div id = 'next' onclick = "next()">
+                    <svg height="30" width="40">
+                        <path d="M10 2 L25 15 L10 28" stroke-width = '4' stroke = 'white' fill = 'none'/>
+                    </svg>                     
+                </div>
+        </div>  
+    </body>
+    <script>
+        c(2);
+    </script>
+</html>
